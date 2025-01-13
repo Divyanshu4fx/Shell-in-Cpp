@@ -1,31 +1,6 @@
-#include <iostream>
-#include <vector>
-#include <string>
-using namespace std;
-// string lsh_read_line()
-// {
-    
-// }
-void lsh_loop()
-{
-    string line;
-    vector<string> args;
-    int status;
-
-    do 
+if (args.size() < 3)
     {
-    line = cin>>line;
-    if(line == "quit")
-    {
-        std::cout<<"quiting..."<<endl;
-        break;
+        cerr << "Invalid usage" << endl;
+        cout << "Usage : alias <aliased command> <command>" << endl;
+        return 1;
     }
-    // args = lsh_split_line(line);
-    // status = lsh_execute(args);
-    }while(status);
-}
-int main()
-{
-    lsh_loop();
-    return 0;
-}
